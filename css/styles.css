@@ -1,0 +1,333 @@
+/*---------------------  General & Global -----------------  */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+:root {
+  --primary-color: #7b2382;
+  --hover-color: #4e1752;
+  --white-text-color: #fff;
+  --hover-text-color: rgb(195, 190, 183);
+  --black-text-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+body,
+.body_container,
+img,
+.logo-container_link,
+.menu > li {
+  width: 100%;
+  height: 100%;
+}
+
+/*---------------------  Containers & Wraps -----------------  */
+
+.seperator-x_container,
+.cell-seperator-x_container,
+.sep-logo_container,
+.header-wrap,
+.navbar,
+.top-section-wrap,
+.main-wrap,
+.main-section-titles-container,
+.grid-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 0 19%;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/*------------------------  Header --------------------  */
+
+/* //? wrap  */
+.header-wrap {
+  position: fixed;
+  background-color: var(--white-text-color);
+  padding: 0;
+  z-index: 10;
+}
+
+/* //? top-header  */
+.top-header-container {
+  display: grid;
+  align-items: center;
+  justify-items: flex-start;
+  grid-template-areas: "logo logo contacts";
+  width: 100%;
+  padding: 0 15%;
+  max-height: 10vh;
+  background-color: var(--white-text-color);
+}
+.logo-container {
+  grid-area: logo;
+  width: 350px;
+  height: 50%;
+}
+.medixcorp-logo:hover{
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;      
+}
+.contacts-container {
+  grid-area: contacts;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20px;
+  font-size: 1rem;
+  gap: 30px;
+}
+.phone-text {
+  white-space: nowrap;
+}
+.phone-container,
+.header_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+}
+.login-btn:hover {
+  border-bottom: 1px solid black;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--primary-color);
+}
+
+/* //? navbar  */
+.navbar {
+  flex-direction: row;
+  height: 5vh;
+  max-height: 50px;
+  background-color: var(--primary-color);
+  color: var(--white-text-color);
+  padding: 0 20%;
+}
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+.menu > li {
+  padding: 10px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.menu > li:hover {
+  transition: 0.7s ease;
+  background-color: var(--hover-color);
+  color: var(--hover-text-color);
+
+}
+
+/*------------------------  Top-section --------------------  */
+.top-section-wrap {
+  justify-content: center;
+  text-align: center;
+  color: var(--white-text-color);
+  background-image: url(/assets/top-img.jpg);
+  background-size: 100% 100%;
+  height: 55vh;
+  margin-top: 7vh;
+  gap: 25px;
+  padding:0 9%;
+}
+.top-section-title {
+  font-size: 2.4rem;
+  padding:0 10%;
+}
+.top-section-text {
+  font-size: 1.2rem;
+  padding:0 10%;
+}
+.read-more-btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+}
+.read-more-btn:hover {
+  background-color: var(--hover-color);
+  color:var(--hover-text-color);
+  transform: scale(1.03);
+  transition: transform 0.2s ease-in;
+}
+
+/*---------------------------- Main ------------------------  */
+/* //? main-wrap  */
+.main-wrap {
+  height: 100%;
+  background-image: url(/assets/bg-pattern.png);
+  background-size: 100% 100%;
+  padding: 100px 0;
+  gap: 100px;
+}
+.main-section-titles-container {
+  justify-content: center;
+  text-align: center;
+}
+.main-section-title {
+  color: var(--primary-color);
+}
+.main-section-paragraph {
+  color: var(--black-text-color);
+}
+/* //? main-grid  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: var(--black-text-color);
+}
+/* //? main-seperators  */
+.seperator-y {
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background-image: url(/assets/seperator-y.png);
+  margin-top: 20px;
+}
+.seperator-x_container,
+.cell-seperator-x_container,
+.sep-logo_container {
+  justify-content: center;
+  position: absolute;
+  top: 47.5%;
+  padding: 0;
+}
+.seperator-x {
+  width: 100%;
+  height: 2px;
+  background-image: url(/assets/seperator-x.png);
+  margin-top: 20px;
+}
+.sep-logo_container {
+  flex-direction: row;
+  width: 50px;
+  height: 50px;
+  top: -8%;
+  left: 47.5%;
+  z-index: 2;
+  background-color: var(--white-text-color);
+}
+.sep-logo_container > img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.cell-seperator-x_container {
+  display: none;
+}
+/* //? main grid items */
+.grid-cell {
+  position: relative;
+  justify-content: flex-start;
+  height: 300px;
+  width: 480px;
+  padding: 0px;
+  margin-top: 20px;
+}
+.grid-cell > img {
+  width: 100px;
+  height: 65px;
+}
+.grid-title {
+  width: 210px;
+  margin: 10px 0;
+}
+.grid-text {
+  width: 100%;
+  padding: 0 30px;
+}
+
+
+/*---------------------------- Mobile on rotate mod ------------------------  */
+@media (max-height: 450px) {
+  .header-wrap{
+    height: 15vh;
+  }
+  .top-header-container {
+    height: 100%;
+    max-height: 50px;
+  }
+  .top-section-wrap {
+    min-height: 75vh;
+    margin-top: 70px;
+  }
+  .top-section-title{
+    font-size: 2.6rem;
+  }
+  .top-section-text {
+    font-size: 1rem;
+    overflow: hidden;
+  }
+}
+
+/*---------------------------- Big Screens ------------------------  */
+/* //? Full HD */
+@media (min-width:1920px){
+  .top-header-container{
+    max-height: 10vh;
+  }
+  .top-section-title {
+    font-size: 3.2rem;
+  }
+  .top-section-text {
+    padding:0 15%;
+  }
+}
+
+/* //? 2k ~ 4k*/
+@media (min-width:2520px){
+  .top-section-text {
+    padding:0 25%;
+  }
+}

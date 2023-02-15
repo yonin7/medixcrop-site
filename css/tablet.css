@@ -1,0 +1,96 @@
+.top-section-wrap,
+.main-wrap {
+  padding: 0 5%;
+}
+
+.navbar,
+.menu,
+.menu > li,
+.grid-cell {
+  width: 100%;
+}
+
+.phone-container,
+.navbar,
+.top-section-wrap,
+.grid-cell {
+  padding: 0;
+}
+
+.phone-container .phone-text,
+.header_login {
+  display: none;
+}
+/*------------------------  Header --------------------  */
+.header-wrap {
+  flex-direction: row;
+}
+.top-header-container {
+  padding: 0;
+  grid-template-areas: "contacts logo hamburger";
+  justify-items: center;
+  justify-content: space-around;
+}
+.logo-container {
+  grid-area: logo;
+}
+.contacts-container {
+  grid-area: contacts;
+  height: 30px;
+}
+.phone-icon {
+  max-width: 30px;
+}
+/* //? hamburger  */
+.hamburger {
+  display: block;
+  grid-area: hamburger;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.bar {
+  transition: all 0.7s ease-in;
+}
+.navbar {
+  position: fixed;
+  top: -430px;
+  height: 100%;
+  max-height: 35vh;
+  transition: all 0.7s ease-in;
+  z-index: -1;
+}
+.navbar.active {
+  position: fixed;
+  justify-content: center;
+  top: 7vh;
+}
+.menu {
+  flex-direction: column;
+}
+/*---------------------------- Main ------------------------  */
+.sep-logo_container {
+  left: 46.5%;
+}
+.grid-cell {
+  height: 300px;
+}
+.grid-text {
+  width: 80%;
+  font-size: 0.8rem;
+}
+
+/*---------------------------- Mobile on rotate mod ------------------------  */
+@media (max-height: 430px) {
+  .navbar.active {
+    top: 17vh;
+    max-height: 85vh;
+  }
+
+}
