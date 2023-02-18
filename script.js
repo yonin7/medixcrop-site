@@ -112,8 +112,8 @@ const menuList = () => {
 //! this function cut and adjust the top section's paragraph text to mobile.
 const topSectionParagraphText = () => {
   if (
-    window.screen.width < mobileScreenSizeY ||
-    window.screen.height < mobileScreenSizeX
+    window.innerWidth < mobileScreenSizeX ||
+    window.innerHeight < mobileScreenSizeY
   ) {
     newTopSectionText.innerText = sectionParagraph.split(".")[0];
   } else {
@@ -126,12 +126,14 @@ const topSectionParagraphText = () => {
 let screenSize = window.addEventListener("resize", function (event) {
   const newTopSectionTextPrinter = () => {
     if (
-      screenSize < mobileScreenSizeY ||
-      window.screen.height < mobileScreenSizeX
+      event.target.screen.width < mobileScreenSizeX ||
+      event.target.screen.height < mobileScreenSizeY
     ) {
+      console.log("resize2");
       newTopSectionText.innerText = sectionParagraph.split(".")[0];
     } else {
       newTopSectionText.innerText = sectionParagraph;
+      console.log("resize3");
     }
   };
   newTopSectionTextPrinter();
