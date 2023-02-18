@@ -129,11 +129,9 @@ let screenSize = window.addEventListener("resize", function (event) {
       event.target.screen.width < mobileScreenSizeX ||
       event.target.screen.height < mobileScreenSizeY
     ) {
-      console.log("resize2");
       newTopSectionText.innerText = sectionParagraph.split(".")[0];
     } else {
       newTopSectionText.innerText = sectionParagraph;
-      console.log("resize3");
     }
   };
   newTopSectionTextPrinter();

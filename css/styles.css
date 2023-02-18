@@ -21,6 +21,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  overscroll-behavior: contain;
 }
 
 body,
@@ -89,9 +90,9 @@ button {
   width: 350px;
   height: 50%;
 }
-.medixcorp-logo:hover{
+.medixcorp-logo:hover {
   transform: scale(1.05);
-  transition: transform 0.5s ease-in-out;      
+  transition: transform 0.5s ease-in-out;
 }
 .contacts-container {
   grid-area: contacts;
@@ -157,12 +158,10 @@ button {
   color: inherit;
 }
 
-
 .menu > li:hover {
   transition: 0.7s ease;
   background-color: var(--hover-color);
   color: var(--hover-text-color);
-
 }
 
 /*------------------------  Top-section --------------------  */
@@ -175,15 +174,15 @@ button {
   height: 55vh;
   margin-top: 7vh;
   gap: 25px;
-  padding:0 9%;
+  padding: 0 9%;
 }
 .top-section-title {
   font-size: 2.4rem;
-  padding:0 10%;
+  padding: 0 10%;
 }
 .top-section-text {
   font-size: 1.2rem;
-  padding:0 10%;
+  padding: 0 10%;
 }
 .read-more-btn {
   width: 150px;
@@ -193,7 +192,7 @@ button {
 }
 .read-more-btn:hover {
   background-color: var(--hover-color);
-  color:var(--hover-text-color);
+  color: var(--hover-text-color);
   transform: scale(1.03);
   transition: transform 0.2s ease-in;
 }
@@ -288,10 +287,9 @@ button {
   padding: 0 30px;
 }
 
-
 /*---------------------------- Mobile on rotate mod ------------------------  */
 @media (max-height: 450px) {
-  .header-wrap{
+  .header-wrap {
     height: 15vh;
   }
   .top-header-container {
@@ -302,7 +300,7 @@ button {
     min-height: 75vh;
     margin-top: 70px;
   }
-  .top-section-title{
+  .top-section-title {
     font-size: 2.6rem;
   }
   .top-section-text {
@@ -313,21 +311,21 @@ button {
 
 /*---------------------------- Big Screens ------------------------  */
 /* //? Full HD */
-@media (min-width:1920px){
-  .top-header-container{
+@media (min-width: 1920px) {
+  .top-header-container {
     max-height: 10vh;
   }
   .top-section-title {
     font-size: 3.2rem;
   }
   .top-section-text {
-    padding:0 15%;
+    padding: 0 15%;
   }
 }
 
 /* //? 2k ~ 4k*/
-@media (min-width:2520px){
+@media (min-width: 2520px) {
   .top-section-text {
-    padding:0 25%;
+    padding: 0 25%;
   }
 }
